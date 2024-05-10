@@ -7,9 +7,15 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
+import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Getter
 @Setter
@@ -23,6 +29,7 @@ public class  ToDo {
     @NonNull
     private String desc;
     @CreatedDate
-    Timestamp dateCreated;
+    LocalDate dateCreate = LocalDate.now(); // Create a date object
+
 
 }

@@ -21,15 +21,15 @@ public class TodoController {
     public void save(@RequestBody ToDo toDo){
         todoService.saveToDo(toDo);
     }
-    @GetMapping("{/id}")
+    @GetMapping("/{id}")
     public ToDo findOne(@PathVariable Long id){
         return  todoService.getTodoById(id);
     }
-    @PutMapping("{/id}")
+    @PutMapping("/{id}")
     public void Update(@PathVariable Long id, @RequestBody ToDo todo){
         this.todoService.updateTodo(id,todo);
     }
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public void Delete(@PathVariable Long id){
         this.todoService.deleteTodo(id);
     }
