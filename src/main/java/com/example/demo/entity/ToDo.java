@@ -27,7 +27,7 @@ public class  ToDo {
     @NonNull
     private String taskName;
     @NonNull
-    private String desc;
+    private String description;
     @CreatedDate
     LocalDate dateCreate = LocalDate.now(); // Create a date object
 
